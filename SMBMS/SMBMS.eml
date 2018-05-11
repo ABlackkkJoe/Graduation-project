@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.8" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/out/test/SMBMS"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="fastjson-1.2.6" scope="PROVIDED"/>
+	<lib name="jstl" scope="PROVIDED"/>
+	<lib name="Tomcat 7.0.85" scope="PROVIDED"/>
+	<lib name="c3p0-0.9.1.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.1.2.jar!/"/>
+	</lib>
+	<lib name="commons-beanutils-1.8.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.3.jar!/"/>
+	</lib>
+	<lib name="commons-dbcp-1.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp-1.4.jar!/"/>
+	</lib>
+	<lib name="commons-dbutils-1.7.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.7.jar!/"/>
+	</lib>
+	<lib name="commons-pool-1.5.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-pool-1.5.4.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.2.21.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.21.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.2.6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.6.jar!/"/>
+	</lib>
+	<lib name="jstl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.1.0-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.0-bin.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.1.26-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar!/"/>
+	</lib>
+	<lib name="servlet-api-2.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api-2.5.jar!/"/>
+	</lib>
+	<lib name="standard.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/"/>
+	</lib>
+	<lib name="servlet-api.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/"/>
+	</lib>
+	<levels>
+		<level name="fastjson-1.2.6" value="project"/>
+		<level name="jstl" value="project"/>
+		<level name="servlet-api-2.5" value="project"/>
+		<level name="fastjson-1.2.21" value="project"/>
+		<level name="mysql-connector-java-5.1.26-bin" value="project"/>
+		<level name="commons-dbcp-1.4" value="project"/>
+		<level name="Tomcat 7.0.85" value="application_server_libraries"/>
+	</levels>
+</component>
