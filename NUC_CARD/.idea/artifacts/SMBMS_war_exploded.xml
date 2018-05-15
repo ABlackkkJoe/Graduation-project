@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SMBMS:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SMBMS_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="NUC_CARD/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="NUC_CARD" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="fastjson-1.2.6" />
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="commons-dbcp-1.4" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.26-bin" />
+          <element id="library" level="project" name="fastjson-1.2.21" />
+          <element id="library" level="module" name="c3p0-0.9.1.2.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="commons-dbcp-1.4.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="commons-dbutils-1.7.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="commons-pool-1.5.4.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="fastjson-1.2.6.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="jstl.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="standard.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="fastjson-1.2.21.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.0-bin.jar" module-name="SMBMS" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.26-bin.jar" module-name="SMBMS" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
