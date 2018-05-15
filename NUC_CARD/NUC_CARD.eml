@@ -55,6 +55,7 @@
 		<level name="commons-dbcp-1.4" value="project"/>
 		<level name="Tomcat 7.0.85" value="application_server_libraries"/>
 		<level name="Java EE 6-Java EE 6" value="project"/>
+		<level name="mail" value="project"/>
 		<level name="Maven: org.apache.hadoop:hadoop-client:2.6.5" value="project"/>
 		<level name="Maven: org.apache.hadoop:hadoop-common:2.6.5" value="project"/>
 		<level name="Maven: com.google.guava:guava:11.0.2" value="project"/>
@@ -122,6 +123,5 @@
 		<level name="Maven: org.apache.hadoop:hadoop-annotations:2.6.5" value="project"/>
 		<level name="Maven: javax.mail:mail:1.4.7" value="project"/>
 		<level name="Maven: javax.activation:activation:1.1" value="project"/>
-		<level name="mail" value="project"/>
 	</levels>
 </component>

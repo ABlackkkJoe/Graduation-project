@@ -8,27 +8,27 @@
     <!--配置接口-->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>cn.smbms.servlet.user.LoginServlet</servlet-class>
+        <servlet-class>cn.card.servlet.user.LoginServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>cn.smbms.servlet.user.LogoutServlet</servlet-class>
+        <servlet-class>cn.card.servlet.user.LogoutServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>UserServlet</servlet-name>
-        <servlet-class>cn.smbms.servlet.user.UserServlet</servlet-class>
+        <servlet-class>cn.card.servlet.user.UserServlet</servlet-class>
     </servlet>
     
     <servlet>
         <servlet-name>ProviderServlet</servlet-name>
-        <servlet-class>cn.smbms.servlet.provider.ProviderServlet</servlet-class>
+        <servlet-class>cn.card.servlet.provider.ProviderServlet</servlet-class>
     </servlet>
     
     <servlet>
         <servlet-name>BillServlet</servlet-name>
-        <servlet-class>cn.smbms.servlet.bill.BillServlet</servlet-class>
+        <servlet-class>cn.card.servlet.bill.BillServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -61,11 +61,11 @@
     <!--过滤器: 对访问的/jsp/*进行拦截-->
     <filter>
         <filter-name>SysFilter</filter-name>
-        <filter-class>cn.smbms.filter.SysFilter</filter-class>
+        <filter-class>cn.card.filter.SysFilter</filter-class>
     </filter>
     <filter>
         <filter-name>CharacterEncoding</filter-name>
-        <filter-class>cn.smbms.filter.CharacterEncoding</filter-class>
+        <filter-class>cn.card.filter.CharacterEncoding</filter-class>
     </filter>
 
 

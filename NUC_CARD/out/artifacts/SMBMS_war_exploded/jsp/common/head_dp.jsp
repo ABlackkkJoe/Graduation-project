@@ -34,7 +34,7 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-                <li ><a href="#">用户角色：${userSession.userRole}</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user_dp/dpShow_kmeans.jsp">聚类分析消费结果</a></li>
                 <li ><a href="${pageContext.request.contextPath }/jsp/user_dp/dpShow_attend.jsp">收益可视化_入伍</a></li>
                 <li ><a href="${pageContext.request.contextPath }/jsp/user_dp/dpShow_normal.jsp">收益可视化_正常</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
