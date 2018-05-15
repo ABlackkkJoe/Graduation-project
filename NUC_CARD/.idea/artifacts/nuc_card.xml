@@ -1,9 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="nuc_card">
-    <output-path>$USER_HOME$/Desktop</output-path>
-    <root id="archive" name="nuc_card.war">
-      <element id="artifact" artifact-name="SMBMS:war exploded" />
-      <element id="dir-copy" path="$PROJECT_DIR$" />
+  <artifact type="war" name="NUC-CARD">
+    <output-path>$PROJECT_DIR$/../..</output-path>
+    <root id="archive" name="NUC-CARD.war">
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
     </root>
   </artifact>
 </component>

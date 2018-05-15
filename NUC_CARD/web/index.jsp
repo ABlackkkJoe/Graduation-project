@@ -70,7 +70,7 @@
 						<li>
 							<ul class="address-text">
 								<li><b>WEBSITE </b></li>
-								<li><a href="http://w3layouts.com">www.ocpro.cc/nuc_card</a></li>
+								<li><a href="http://www.ocpro.cc/nuc_card/">http://www.ocpro.cc/nuc_card/</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -95,7 +95,7 @@
 						<li><a href="#about" class="scroll">Home</a></li>
 						<li><a href="#work" class="scroll">Analyze</a></li>
 						<li><a href="#projects" class="scroll">Visualize</a></li>
-						<li><a href="${pageContext.request.contextPath}／login.jsp" class="scroll">Login</a></li>
+						<li><a href="http://www.ocpro.cc/nuc_card/">Login</a></li>
 						<li><a href="#contact" class="scroll">About</a></li>
 					</ul>
 					<div class="clearfix"> </div>
