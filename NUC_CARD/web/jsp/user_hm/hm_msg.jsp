@@ -16,13 +16,13 @@
 <div class="right">
        <div class="location">
            <strong>你现在所在的位置是:</strong>
-           <span>消费管理页面</span>
+           <span>POS机收益详情页面</span>
        </div>
        <!--账单表格 样式和供应商公用-->
       <table class="providerTable" cellpadding="0" cellspacing="0">
           <tr class="firstTr">
               <th width="20%">刷卡机编码</th>
-              <th width="20%">消费金额</th>
+              <th width="20%">收益金额</th>
               <th width="10%">学院</th>
               <th width="10%">专业</th>
               <th width="10%">年级</th>

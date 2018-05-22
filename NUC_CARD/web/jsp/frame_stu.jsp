@@ -9,9 +9,10 @@
 <c:if test="${userSession.userRole==6}">
     <%@include file="/jsp/common/head_DownStu.jsp"%>
 </c:if>
-<c:if test="${userSession.userRole==7||userSession.getUserRole==9}">
+<c:if test="${userSession.userRole==7||userSession.userRole==9}">
     <%@include file="/jsp/common/head_NormalStu.jsp"%>
 </c:if>
+
     <div class="right">
         <img class="wColck" src="${pageContext.request.contextPath }/images/clock.jpg" alt=""/>
         <div class="wFont">

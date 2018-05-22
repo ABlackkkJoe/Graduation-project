@@ -13,7 +13,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>消费区域---入伍学生消费页面</span>
+        <span>购热水消费可视化页面</span>
     </div>
     <div class="providerAdd">
         <!‐‐ 引入Echarts3包 ‐‐>
@@ -21,7 +21,7 @@
 
         <!‐‐ 引入Jquery包 ‐‐>
         <script type="text/javascript" src="${pageContext.request.contextPath }/js/echarts.min.js"></script>
-    <h1>water消费类型分析柱状图演示</h1>
+    <h1>各个POS机收益分析柱状图演示</h1>
     <div id="main1" style="width: 1000px;height:400px;"></div>
     <script type="text/javascript">
         var myChart1 = echarts.init(document.getElementById('main1'));
@@ -43,8 +43,8 @@
                 }
                 option1 = {
                     title: {
-                        text: 'water消费类型分析',//图片名称
-                        subtext: '222',
+                        text: '各个POS机收益分析',//图片名称
+                        subtext: 'POS机收益',
                         x: 'center'
                     },
                     legend: {
@@ -63,7 +63,7 @@
                     calculable : true,
                     tooltip: {},
                     xAxis: {
-                        name: 'opfare',
+                        name: '收益额',
                         silent: false,
                         axisLine: {onZero: true},
                         splitLine: {show: false},
@@ -78,7 +78,7 @@
                         left: 100
                     },
                     series: [{
-                        name: 'shower',
+                        name: '',
                         type: 'bar',
                         stack: 'one',
                         data: mapKeyValue1
@@ -89,7 +89,7 @@
             }
         });
     </script>
-    <h1>water消费时间分析散点图演示</h1>
+    <h1>购热水消费时间点频率分析散点图演示</h1>
     <div id="main2" style="width: 1000px;height:400px;"></div>
     <script type="text/javascript">
         var myChart2 = echarts.init(document.getElementById('main2'));
@@ -110,8 +110,8 @@
                 }
                 option2 = {
                     title: {
-                        text: 'water消费时间分析',//图片名称
-                        subtext: '222',
+                        text: '购热水消费时间点频率分析',//图片名称
+                        subtext: '时间点分析',
                         x: 'center'
                     },
                     legend: {
@@ -149,26 +149,26 @@
                         }},
                     xAxis: {
                         data: mapOnlyKey2,
-                        name: 'point',
+                        name: '时间点',
                         scala:true
                     },
                     yAxis: {
-                        name: 'num',
+                        name: '频率',
                         scala:true
                     },
                     series: [{
-                        name: 'num',
+                        name: '频率',
                         type: 'scatter',
                         data: mapKeyValue2,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '频率最大值'},
+                                {type : 'min', name: '频率最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '频率平均值'}
                             ]
                         }
                     }]
@@ -177,7 +177,7 @@
             }
         });
     </script>
-    <h2>每周日峰值分析折线图演示</h2>
+    <h2>每周每日刷卡总频率分析折线图演示</h2>
     <div id="main6" style="width:450px;height:300px;"></div>
     <script type="text/javascript">
         var myChart6 = echarts.init(document.getElementById('main6'));
@@ -199,8 +199,8 @@
                 }
                 option6 = {
                     title: {
-                        text: '每周日峰值',//图片名称
-                        subtext: '222',
+                        text: '每周每日刷卡总频率分析',//图片名称
+                        subtext: '每日频率',
                         x: 'center'
                     },
                     legend: {
@@ -219,7 +219,7 @@
                     calculable : true,
                     tooltip: {},
                     xAxis: {
-                        name: 'day',
+                        name: '日',
                         silent: false,
                         axisLine: {onZero: true},
                         splitLine: {show: false},
@@ -228,23 +228,23 @@
                     },
                     yAxis: {
                         type:'value',
-                        name: 'num',
+                        name: '日频率',
                         inverse: false,
                         splitArea: {show: false}
                     },
                     series: [{
-                        name: 'num',
+                        name: '日频率',
                         type: 'line',
                         data: mapKeyValue6,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '日频率最大值'},
+                                {type : 'min', name: '日频率最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '日频率平均值'}
                             ]
                         }
                     }]
@@ -254,7 +254,7 @@
             }
         });
     </script>
-    <h2>water人数9-12月日峰值分析折线图演示</h2>
+    <h2>9-12月份每日刷卡总频率分析折线图演示</h2>
     <div id="main5" style="width:400px;height:300px;"></div>
     <script type="text/javascript">
         var myChart5 = echarts.init(document.getElementById('main5'));
@@ -276,8 +276,8 @@
                 }
                 option5 = {
                     title: {
-                        text: 'water人数日峰值',//图片名称
-                        subtext: '222',
+                        text: '9-12月份每日刷卡总频率分析',//图片名称
+                        subtext: '每日频率',
                         x: 'center'
                     },
                     legend: {
@@ -296,7 +296,7 @@
                     calculable : true,
                     tooltip: {},
                     xAxis: {
-                        name: 'point',
+                        name: '日期',
                         silent: false,
                         axisLine: {onZero: true},
                         splitLine: {show: false},
@@ -306,23 +306,23 @@
                     },
                     yAxis: {
                         type:'value',
-                        name: 'num',
+                        name: '频率',
                         inverse: false,
                         splitArea: {show: false}
                     },
                     series: [{
-                        name: 'num',
+                        name: '频率',
                         type: 'line',
                         data: mapKeyValue5,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '频率最大值'},
+                                {type : 'min', name: '频率最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '频率平均值'}
                             ]
                         }
                     }]
@@ -332,7 +332,7 @@
             }
         });
     </script>
-    <h2>water9月每人消费金额分析散点图演示</h2>
+    <h2>每人9月份消费总金额分析散点图演示</h2>
     <div id="main7" style="width: 400px;height:300px;"></div>
     <script type="text/javascript">
         var myChart7 = echarts.init(document.getElementById('main7'));
@@ -352,8 +352,8 @@
                 }
                 option7 = {
                     title: {
-                        text: 'water9月每人消费时间分析',//图片名称
-                        subtext: '222',
+                        text: '每人9月份消费总金额分析',//图片名称
+                        subtext: '个人月总消费',
                         x: 'center'
                     },
                     legend: {
@@ -391,26 +391,26 @@
                         }},
                     xAxis: {
                         data: mapOnlyKey7,
-                        name: 'outid',
+                        name: '学号',
                         scala:true
                     },
                     yAxis: {
-                        name: 'opfare',
+                        name: '消费总金额',
                         scala:true
                     },
                     series: [{
-                        name: 'num',
+                        name: '消费总金额',
                         type: 'scatter',
                         data: mapKeyValue7,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '消费总金额最大值'},
+                                {type : 'min', name: '消费总金额最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '消费总金额平均值'}
                             ]
                         }
                     }]
@@ -420,7 +420,7 @@
         });
     </script>
 
-    <h2>water10月每人消费金额分析散点图演示</h2>
+    <h2>每人10月份消费总金额分析散点图演示</h2>
     <div id="main8" style="width: 400px;height:300px;"></div>
     <script type="text/javascript">
         var myChart8 = echarts.init(document.getElementById('main8'));
@@ -440,8 +440,8 @@
                 }
                 option8= {
                     title: {
-                        text: 'water10月每人消费时间分析',//图片名称
-                        subtext: '222',
+                        text: '每人10月份消费总金额分析',//图片名称
+                        subtext: '个人月总消费',
                         x: 'center'
                     },
                     legend: {
@@ -479,26 +479,26 @@
                         }},
                     xAxis: {
                         data: mapOnlyKey8,
-                        name: 'outid',
+                        name: '学号',
                         scala:true
                     },
                     yAxis: {
-                        name: 'opfare',
+                        name: '消费总金额',
                         scala:true
                     },
                     series: [{
-                        name: 'num',
+                        name: '消费总金额',
                         type: 'scatter',
                         data: mapKeyValue8,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '消费总金额最大值'},
+                                {type : 'min', name: '消费总金额最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '消费总金额平均值'}
                             ]
                         }
                     }]
@@ -507,7 +507,7 @@
             }
         });
     </script>
-    <h2>water11月每人消费金额分析散点图演示</h2>
+    <h2>每人11月份消费总金额分析散点图演示</h2>
     <div id="main4" style="width: 400px;height:300px;"></div>
     <script type="text/javascript">
         var myChart4 = echarts.init(document.getElementById('main4'));
@@ -527,8 +527,8 @@
                 }
                 option4 = {
                     title: {
-                        text: 'water11月每人消费时间分析',//图片名称
-                        subtext: '222',
+                        text: '每人11月份消费总金额分析',//图片名称
+                        subtext: '个人月总消费',
                         x: 'center'
                     },
                     legend: {
@@ -566,26 +566,26 @@
                         }},
                     xAxis: {
                         data: mapOnlyKey4,
-                        name: 'outid',
+                        name: '学号',
                         scala:true
                     },
                     yAxis: {
-                        name: 'opfare',
+                        name: '消费总金额',
                         scala:true
                     },
                     series: [{
-                        name: 'num',
+                        name: '消费总金额',
                         type: 'scatter',
                         data: mapKeyValue4,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '消费总金额最大值'},
+                                {type : 'min', name: '消费总金额最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '消费总金额平均值'}
                             ]
                         }
                     }]
@@ -594,7 +594,7 @@
             }
         });
     </script>
-    <h2>water12月每人消费金额分析散点图演示</h2>
+    <h2>每人12月份消费总金额分析散点图演示</h2>
     <div id="main3" style="width: 400px;height:300px;"></div>
     <script type="text/javascript">
         var myChart3 = echarts.init(document.getElementById('main3'));
@@ -614,8 +614,8 @@
                 }
                 option3 = {
                     title: {
-                        text: 'water12月每人消费时间分析',//图片名称
-                        subtext: '222',
+                        text: '每人12月份消费总金额分析',//图片名称
+                        subtext: '个人月总消费',
                         x: 'center'
                     },
                     legend: {
@@ -653,26 +653,26 @@
                         }},
                     xAxis: {
                         data: mapOnlyKey3,
-                        name: 'outid',
+                        name: '学号',
                         scala:true
                     },
                     yAxis: {
-                        name: 'opfare',
+                        name: '消费总金额',
                         scala:true
                     },
                     series: [{
-                        name: 'num',
+                        name: '消费总金额',
                         type: 'scatter',
                         data: mapKeyValue3,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '消费总金额最大值'},
+                                {type : 'min', name: '消费总金额最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '消费总金额平均值'}
                             ]
                         }
                     }]
@@ -681,7 +681,7 @@
             }
         });
     </script>
-    <h2>water pos机刷卡次数和金额分析折线图演示</h2>
+    <h2>POS机刷卡次数和收益额分析折线图演示</h2>
     <div id="main9" style="width:600px;height:300px;"></div>
     <script type="text/javascript">
         var myChart9 = echarts.init(document.getElementById('main9'));
@@ -703,8 +703,8 @@
                 }
                 option9 = {
                     title: {
-                        text: 'water pos num_opfare',//图片名称
-                        subtext: '222',
+                        text: 'POS机刷卡次数和收益额分析',//图片名称
+                        subtext: '收益／次',
                         x: 'center'
                     },
                     legend: {
@@ -725,19 +725,19 @@
                         trigger: 'axis'
                     },
                     xAxis: {
-                        name: 'termname',
+                        name: 'POS机编码',
                         data:  mapOnlyKey9
                     },
                     yAxis: {
                         type:'value'
                     },
                     series: [{
-                        name: 'count',
+                        name: '刷卡次数',
                         type: 'line',
                         data: mapKeyValue9,
                         },
                         {
-                        name: 'opfare',
+                        name: '收益额',
                         type: 'line',
                         data: mapOnlyValue9,
                          }

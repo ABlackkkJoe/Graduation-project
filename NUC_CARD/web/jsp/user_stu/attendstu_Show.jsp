@@ -16,7 +16,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>个人管理页面</span>
+        <span>个人消费可视化页面</span>
     </div>
 
     <div class="providerAdd">
@@ -52,7 +52,7 @@
                     option = {
                         title: {
                             text: '个人三大消费类型分析',//图片名称
-                            subtext: '210 211 222',
+                            subtext: '210：餐饮支出 211：淋浴支出 222：购热水支出',
                             x: 'center'
                         },
                         tooltip: {
@@ -85,7 +85,7 @@
                 }
             });
         </script>
-        <h1>个人canteen消费类型分析柱状图演示</h1>
+        <h1>个人餐饮消费类型分析柱状图演示</h1>
         <div id="main1" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart1 = echarts.init(document.getElementById('main1'));
@@ -107,8 +107,8 @@
                     }
                     option1 = {
                         title: {
-                            text: '个人canteen消费类型分析',//图片名称
-                            subtext: '210',
+                            text: '个人餐饮消费类型分析',//图片名称
+                            subtext: '餐饮支出',
                             x: 'center'
                         },
                         legend: {
@@ -127,14 +127,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'bar',
+                            name: '消费金额',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue1
@@ -145,7 +145,7 @@
                 }
             });
         </script>
-        <h1>个人shower消费类型分析柱状图演示</h1>
+        <h1>个人淋浴消费类型分析柱状图演示</h1>
         <div id="main2" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart2 = echarts.init(document.getElementById('main2'));
@@ -167,8 +167,8 @@
 
                     option2 = {
                         title: {
-                            text: '个人shower消费类型分析',//图片名称
-                            subtext: '211',
+                            text: '个人淋浴消费类型分析',//图片名称
+                            subtext: '淋浴',
                             x: 'center'
                         },
                         legend: {
@@ -187,14 +187,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'opfare',
+                            name: '消费金额',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue2
@@ -227,8 +227,8 @@
 
                     option3 = {
                         title: {
-                            text: '个人water消费类型分析',//图片名称
-                            subtext: '222',
+                            text: '个人购热水消费类型分析',//图片名称
+                            subtext: '购热水',
                             x: 'center'
                         },
                         legend: {
@@ -247,14 +247,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'opfare',
+                            name: '消费金额',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue3

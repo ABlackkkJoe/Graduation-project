@@ -34,9 +34,9 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-                <li ><a href="#">用户角色：${userSession.userRole}</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user_hm/hmShow_shower.jsp">收益可视化</a></li>
                 <li ><a href="${pageContext.request.contextPath }/hmselect">收益明细</a></li>
-                <li ><a href="${pageContext.request.contextPath }/jsp/user_hm/hmShow_shower.jsp">收益可视化_淋浴</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/shReport.jsp">分析报告</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath }/logout">退出系统</a></li>
             </ul>

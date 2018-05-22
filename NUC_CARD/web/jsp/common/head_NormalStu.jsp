@@ -34,10 +34,9 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-
-                <li ><a href="#">用户角色：${userSession.userRole}</a></li>
-                <li ><a href="${pageContext.request.contextPath }/n_stuselect">消费详细查看</a></li>
-                <li ><a href="${pageContext.request.contextPath }/jsp/user_stu/normalstu_Show.jsp">消费分析展示</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user_stu/normalstu_Show.jsp">消费可视化</a></li>
+                <li ><a href="${pageContext.request.contextPath }/n_stuselect">消费明细</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/report.jsp">消费报告</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath }/logout">退出系统</a></li>
             </ul>

@@ -5,7 +5,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>对学院一卡通分析展示---正常学生</span>
+        <span>学院普通学生消费可视化页面</span>
     </div>
     <div class="providerAdd">
     <!‐‐ 引入Echarts3包 ‐‐>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath }/js/echarts.min.js"></script>
     <table class="providerTable" cellpadding="0" cellspacing="0">
         <tr class="firstTr">
-            <h1>14级每个学院人数分析标准条形图演示</h1>
+            <h1>每个学院14级总人数分析标准条形图演示</h1>
             <div id="main3" style="width: 1200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart3 = echarts.init(document.getElementById('main3'));
@@ -37,7 +37,7 @@
 
                         option3 = {
                             title: {
-                                text: '学院学生人数分析',//图片名称
+                                text: '每个学院14级总学生人数分析',//图片名称
                                 subtext: 'num',
                                 x: 'center'
                             },
@@ -70,7 +70,7 @@
                                 boundaryGap : [0, 0.01]
                             },
                             series: [{
-                                name: 'num',
+                                name: '人数',
                                 type: 'bar',
                                 data: mapKeyValue3
                             }]
@@ -82,7 +82,7 @@
             </script>
         </tr>
         <tr class="firstTr">
-            <h1>学院每一消费类型分析堆积面积图演示</h1>
+            <h1>各个学院每一消费类型分析堆积面积图演示</h1>
             <div id="main2" style="width: 1200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart2 = echarts.init(document.getElementById('main2'));
@@ -164,20 +164,20 @@
                             },
                             series: [
                                 {
-                                    name:'210',
+                                    name:'餐饮支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
                                     data: mapKeyValue210
                                 },{
-                                    name:'211',
+                                    name:'淋浴支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
                                     data: mapKeyValue211
                                 },
                                 {
-                                    name:'222',
+                                    name:'购热水支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
@@ -192,7 +192,7 @@
             </script>
         </tr>
         <tr class="firstTr">
-            <h1>14级软件学院专业人数分析漏斗图演示</h1>
+            <h1>软件学院14级各个专业人数分析漏斗图演示</h1>
             <div id="main1" style="width: 1300px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart1 = echarts.init(document.getElementById('main1'));
@@ -236,7 +236,7 @@
                             },
                             calculable : true,
                             series: [{
-                                name: 'major_num',
+                                name: '',
                                 type: 'funnel',
                                 x:'1%',
                                 y: 100,
@@ -292,7 +292,7 @@
             </script>
         </tr>
         <tr class="firstTr">
-            <h1>14级软件学院每个班级人均消费分析标准柱状图演示</h1>
+            <h1>软件学院14级每个班级人均消费分析标准柱状图演示</h1>
             <div id="main5" style="width: 1200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart5 = echarts.init(document.getElementById('main5'));
@@ -314,7 +314,7 @@
 
                         option5 = {
                             title: {
-                                text: '学院每个班级人均消费分析',//图片名称
+                                text: '软件学院14级每个班级人均消费分析',//图片名称
                                 subtext: 'num',
                                 x: 'center'
                             },
@@ -347,7 +347,7 @@
                                 boundaryGap : [0, 0.01]
                             },
                             series: [{
-                                name: 'num',
+                                name: '班级总消费金额',
                                 type: 'bar',
                                 data: mapKeyValue3
                             }]
@@ -359,7 +359,7 @@
             </script>
         </tr>
         <tr class="firstTr">
-            <h1>专业一个班每人消费类型分析堆积面积图演示</h1>
+            <h1>软件学院14级云计算与大数据分析方向14140Y01班每人三大消费类型分析堆积面积图演示</h1>
             <div id="main4" style="width: 1200px;height:960px;"></div>
             <script type="text/javascript">
                 var myChart4 = echarts.init(document.getElementById('main4'));
@@ -430,7 +430,7 @@
                             calculable : true,
                             xAxis: {
                                 type: 'value',
-                                name: 'opfare',
+                                name: '消费金额',
 
                             },
                             yAxis: {
@@ -441,21 +441,21 @@
                             },
                             series: [
                                 {
-                                    name:'211',
+                                    name:'餐饮支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
                                     data: mapKeyValue211
                                 },
                                 {
-                                    name:'210',
+                                    name:'淋浴支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
                                     data: mapKeyValue210
                                 },
                                 {
-                                    name:'222',
+                                    name:'购热水支出',
                                     type: 'bar',
                                     stack: '总消费',
                                     itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},

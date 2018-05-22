@@ -37,7 +37,7 @@ Page({
           var openid = getApp().globalData.openid;
           var payMoney =  that.data.payMoney;
           wx.request({
-            url: 'http://www.ocpro.cc/nuc_card/recharge',
+            url: 'http://www.ocpro.cc/NUC-CARD/recharge',
             //url: 'http://localhost:8080/recharge',
             method: 'POST',
             header: { 'content-type': 'application/x-www-form-urlencoded' },

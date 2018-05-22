@@ -16,7 +16,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>个人管理页面</span>
+        <span>个人消费可视化页面</span>
     </div>
 
     <div class="providerAdd">

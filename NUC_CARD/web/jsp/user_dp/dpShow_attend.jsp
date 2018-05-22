@@ -6,7 +6,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>对学院一卡通分析展示---入伍学生</span>
+        <span>学院入伍学生消费可视化页面</span>
     </div>
     <div class="providerAdd">
         <!‐‐ 引入Echarts3包 ‐‐>
@@ -16,7 +16,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath }/js/echarts.min.js"></script>
     <table class="providerTable" cellpadding="0" cellspacing="0">
         <tr class="firstTr">
-            <h1>入伍总人数分析漏斗图演示</h1>
+            <h1>12级学生入伍总人数分析漏斗图演示</h1>
             <div id="main4" style="width: 200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart4 = echarts.init(document.getElementById('main4'));
@@ -32,7 +32,7 @@
                         }
                         option4 = {
                             title: {
-                                text: '12级应征入伍总人数',//图片名称
+                                text: '12级应征入伍学生总人数',//图片名称
                                 x: 'center'
                             },
                             tooltip: {
@@ -72,7 +72,7 @@
             </script>
         </tr>
         <tr class="firstTr">
-            <h1>学院入伍人数分析漏斗图演示</h1>
+            <h1>各个学院应征入伍人数分析漏斗图演示</h1>
             <div id="main1" style="width: 1200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart1 = echarts.init(document.getElementById('main1'));
@@ -98,7 +98,7 @@
                                 x: 'center'
                             },
                             tooltip: {trigger: 'item',
-                                formatter: "{a} <br/>{b} : {c}"
+                                formatter: "{a} <br/>{b} : {c} 人"
                             },
 
                             toolbox: {show : true,
@@ -114,7 +114,7 @@
                             },
                             calculable : true,
                             series: [{
-                                name: 'dpment',
+                                name: '',
                                 type: 'funnel',
                                 x:'20%',
                                 sort : 'ascending',
@@ -137,7 +137,7 @@
         </tr>
 
         <tr class="firstTr">
-            <h1>学院每一消费类型分析堆积面积图演示</h1>
+            <h1>各个学院应征入伍学生每一消费类型分析堆积面积图演示</h1>
             <div id="main2" style="width: 1200px;height:400px;"></div>
             <script type="text/javascript">
                 var myChart2 = echarts.init(document.getElementById('main2'));
@@ -210,59 +210,59 @@
                                 name: '学院名称',
                             },
                             yAxis: {
-                                name: 'opfare',
+                                name: '消费金额',
                                 type: 'value'
                             },
                             series: [
                                 {
-                                    name:'210',
+                                    name:'餐饮支出',
                                     type: 'line',
                                     stack: '总消费',
                                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
                                     markPoint : {
                                         data : [
-                                            {type : 'max', name: '210最大值'},
-                                            {type : 'min', name: '210最小值'}
+                                            {type : 'max', name: '餐饮支出最大值'},
+                                            {type : 'min', name: '餐饮支出最小值'}
                                         ]
                                     },
                                     markLine : {
                                         data : [
-                                            {type : 'average', name: '210平均值'}
+                                            {type : 'average', name: '餐饮消费平均值'}
                                         ]
                                     },
                                     data: mapKeyValue210
                                 },
                                 {
-                                    name:'211',
+                                    name:'淋浴支出',
                                     type: 'line',
                                     stack: '总消费',
                                     markPoint : {
                                         data : [
-                                            {type : 'max', name: '211最大值'},
-                                            {type : 'min', name: '211最小值'}
+                                            {type : 'max', name: '淋浴支出最大值'},
+                                            {type : 'min', name: '淋浴支出最小值'}
                                         ]
                                     },
                                     markLine : {
                                         data : [
-                                            {type : 'average', name: '211平均值'}
+                                            {type : 'average', name: '淋浴支出平均值'}
                                         ]
                                     },
                                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
                                     data: mapKeyValue211
                                 },
                                 {
-                                    name:'222',
+                                    name:'购热水支出',
                                     type: 'line',
                                     stack: '总消费',
                                     markPoint : {
                                         data : [
-                                            {type : 'max', name: '222最大值'},
-                                            {type : 'min', name: '222最小值'}
+                                            {type : 'max', name: '购热水支出最大值'},
+                                            {type : 'min', name: '购热水支出最小值'}
                                         ]
                                     },
                                     markLine : {
                                         data : [
-                                            {type : 'average', name: '222平均值'}
+                                            {type : 'average', name: '购热水支出平均值'}
                                         ]
                                     },
                                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
@@ -279,7 +279,7 @@
 
         <tr class="firstTr">
 
-        <h1>学院入伍学生人均消费分析标准条形图演示</h1>
+        <h1>各个学院应征入伍学生人均消费分析标准条形图演示</h1>
         <div id="main3" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart3 = echarts.init(document.getElementById('main3'));
@@ -301,7 +301,7 @@
 
                     option3 = {
                         title: {
-                            text: '学院入伍学生人均消费分析',//图片名称
+                            text: '各个学院应征入伍学生人均消费分析',//图片名称
                             subtext: 'average',
                             x: 'center'
                         },
@@ -333,7 +333,7 @@
                             data : mapOnlyKey3
                         },
                         series: [{
-                            name: 'ave',
+                            name: '学院应征入伍学生人均消费',
                             type: 'bar',
                             data: mapKeyValue3
                         }]

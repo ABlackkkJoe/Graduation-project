@@ -8,7 +8,7 @@
 <c:if test="${userSession.userRole==6}">
     <%@include file="/jsp/common/head_DownStu.jsp"%>
 </c:if>
-<c:if test="${userSession.userRole==7||userSession.getUserRole()==7}">
+<c:if test="${userSession.userRole==7||userSession.userRole==9}">
     <%@include file="/jsp/common/head_NormalStu.jsp"%>
 </c:if>
 
@@ -16,7 +16,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>个人管理页面</span>
+        <span>个人消费可视化页面</span>
     </div>
 
     <div class="providerAdd">
@@ -52,7 +52,7 @@
                     option = {
                         title: {
                             text: '个人三大消费类型分析',//图片名称
-                            subtext: '210 211 222',
+                            subtext: '210：餐饮支出 211：淋浴支出 222：购热水支出',
                             x: 'center'
                         },
                         tooltip: {
@@ -135,7 +135,6 @@
                         ],
                         tooltip: { trigger: 'axis'},
                         series: [{
-                            name: 'opfare',
                             name: '月支出',
                             type: 'radar',
                             itemStyle: {
@@ -146,7 +145,7 @@
                                 }
                             },
                             data: [{
-                                name:"mon",
+                                name:"月份",
                                 value:mapKeyValue7
                             }]
                         }]
@@ -156,6 +155,7 @@
                 }
             });
         </script>
+        <!--
         <h1>个人每个月支出分析柱状图演示</h1>
         <div id="main5" style="width: 800px;height:400px;"></div>
         <script type="text/javascript">
@@ -186,7 +186,16 @@
                             align: 'left',
                             left: 10
                         },
-                        toolbox: {},
+                        toolbox: {
+                            show: true,
+                            feature: {
+                                mark: {show: true},
+                                dataZoom: {show: true},
+                                dataView: {show: true, readOnly: false},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
                         tooltip: {},
                         xAxis: {
                             data: mapOnlyKey5,
@@ -197,7 +206,7 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             type:'value',
                             inverse: false,
                             splitArea: {show: false}
@@ -205,7 +214,7 @@
                             left: 100
                         },
                         series: [{
-                            name: 'opfare',
+                            name: 'per_month',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue5
@@ -216,7 +225,8 @@
                 }
             });
         </script>
-        <h1>个人每日支出分析K图演示</h1>
+        -->
+        <h1>个人每日支出K图演示</h1>
         <div id="main8" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart8 = echarts.init(document.getElementById('main8'));
@@ -256,10 +266,10 @@
                             trigger: 'axis',
                             formatter: function (params) {
                                 var res = params[0].seriesName + ' ' + params[0].name;
-                                res += '<br/>  最低 : ' + params[0].value[0];
-                                res += '<br/>  最高 : ' + params[0].value[1];
-                                res += '<br/>  平均 : ' + params[0].value[2];
-                                res += '<br/>  总价 : ' + params[0].value[3];
+                                res += '<br/>  日最低消费 : ' + params[0].value[0];
+                                res += '<br/>  日最高消费 : ' + params[0].value[1];
+                                res += '<br/>  日平均消费 : ' + params[0].value[2];
+                                res += '<br/>  日总消费 : ' + params[0].value[3];
                                 return res;
                             }
                         },
@@ -273,7 +283,7 @@
                             type: 'category',
                             boundaryGap: true,
                             data: mapOnlyKey8,
-                            name: 'date'
+                            name: '日期'
                         },
                             {
                                 type: 'value',
@@ -285,7 +295,7 @@
                             scale: true,
                             splitNumber: 5,
                             boundaryGap: [0.05, 0.05],
-                            name: 'opfare',
+                            name: '消费金额',
                         },
                             {
                                 type: 'value',
@@ -293,7 +303,7 @@
                                 scale: true
                             }],
                         series: [{
-                            name: 'opfare',
+                            name: '',
                             type: 'k',
                             data: mapKeyValue8
                         },
@@ -322,8 +332,8 @@
 
             });
         </script>
-
-        <h1>个人每日支出分析line演示</h1>
+<!--
+        <h1>个人每日支出line演示</h1>
         <div id="main9" style="width: 1100px;height:400px;"></div>
         <script type="text/javascript">
             var mapOnlyKey4=[]
@@ -387,13 +397,13 @@
                                 scale: true,
                                 splitNumber: 3,
                                 boundaryGap: [0.05, 0.05],
-                                name: 'opfare',
+                                name: '消费金额',
                                 splitArea: {show: true}
                             }
                         ],
                         series: [
                             {
-                                name: 'day_line',
+                                name: 'day_opfare',
                                 type: 'line',
                                 symbol: 'none',
                                 data: mapOnliValue,
@@ -420,7 +430,8 @@
 
             });
         </script>
-        <h1>个人餐饮时间点分析折线图演示</h1>
+        -->
+        <h1>个人就餐时间点分析折线图演示</h1>
         <div id="main6" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
@@ -483,7 +494,7 @@
                         ],
                         series: [
                             {
-                                name: 'point',
+                                name: '次数',
                                 type: 'line',
                                 data: mapKeyValue6,//不修改，从数据库调取
                                 markPoint : {
@@ -499,7 +510,7 @@
                 }
             });
         </script>
-        <h1>个人canteen消费类型分析柱状图演示</h1>
+        <h1>个人餐饮POS机消费情况分析柱状图演示</h1>
         <div id="main1" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart1 = echarts.init(document.getElementById('main1'));
@@ -521,8 +532,8 @@
                     }
                     option1 = {
                         title: {
-                            text: '个人canteen消费类型分析',//图片名称
-                            subtext: '210',
+                            text: '个人餐饮POS机消费情况分析',//图片名称
+                            subtext: '餐饮支出',
                             x: 'center'
                         },
                         legend: {
@@ -541,14 +552,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'bar',
+                            name: '',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue1
@@ -559,7 +570,8 @@
                 }
             });
         </script>
-        <h1>个人shower消费类型分析柱状图演示</h1>
+        <!--
+        <h1>个人淋浴POS机消费情况分析柱状图演示</h1>
         <div id="main2" style="width: 1000px;height:400px;"></div>
         <script type="text/javascript">
             var myChart2 = echarts.init(document.getElementById('main2'));
@@ -581,8 +593,8 @@
 
                     option2 = {
                         title: {
-                            text: '个人shower消费类型分析',//图片名称
-                            subtext: '211',
+                            text: '个人淋浴POS机消费情况分析',//图片名称
+                            subtext: '淋浴支出',
                             x: 'center'
                         },
                         legend: {
@@ -590,7 +602,16 @@
                             align: 'left',
                             left: 10
                         },
-                        toolbox: {},
+                        toolbox: {
+                            show: true,
+                            feature: {
+                                mark: {show: true},
+                                dataZoom: {show: true},
+                                dataView: {show: true, readOnly: false},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
                         tooltip: {},
                         xAxis: {
                             data: mapOnlyKey2,
@@ -601,14 +622,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'opfare',
+                            name: '',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue2
@@ -619,7 +640,9 @@
                 }
             });
         </script>
-        <h1>个人购热水支出分析柱状图演示</h1>
+        -->
+        <!--
+        <h1>个人购热水POS机消费情况分析柱状图演示</h1>
         <div id="main3" style="width: 1200px;height:400px;"></div>
         <script type="text/javascript">
             var myChart3 = echarts.init(document.getElementById('main3'));
@@ -641,8 +664,8 @@
 
                     option3 = {
                         title: {
-                            text: '个人water消费类型分析',//图片名称
-                            subtext: '222',
+                            text: '个人够热水POS机消费情况分析',//图片名称
+                            subtext: '购热水',
                             x: 'center'
                         },
                         legend: {
@@ -650,7 +673,16 @@
                             align: 'left',
                             left: 10
                         },
-                        toolbox: {},
+                        toolbox: {
+                            show: true,
+                            feature: {
+                                mark: {show: true},
+                                dataZoom: {show: true},
+                                dataView: {show: true, readOnly: false},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
                         tooltip: {},
                         xAxis: {
                             data: mapOnlyKey3,
@@ -661,14 +693,14 @@
                             splitArea: {show: false}
                         },
                         yAxis: {
-                            name: 'opfare',
+                            name: '消费金额',
                             inverse: false,
                             splitArea: {show: false}
                         }, grid: {
                             left: 100
                         },
                         series: [{
-                            name: 'opfare',
+                            name: 'per_pos',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue3
@@ -679,7 +711,7 @@
                 }
             });
         </script>
-
+-->
         </body>
     </div>
 </div>

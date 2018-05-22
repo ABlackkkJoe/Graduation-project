@@ -15,7 +15,7 @@
 <div class="right">
     <div class="location">
         <strong>你现在所在的位置是:</strong>
-        <span>消费区域---入伍学生消费页面</span>
+        <span>餐厅消费可视化页面</span>
     </div>
     <div class="providerAdd">
         <!‐‐ 引入Echarts3包 ‐‐>
@@ -23,7 +23,7 @@
         <body>
         <!‐‐ 引入Jquery包 ‐‐>
         <script type="text/javascript" src="${pageContext.request.contextPath }/js/echarts.min.js"></script>
-        <h1>canteen消费类型分析柱状图演示</h1>
+        <h1>各个POS机收益分析柱状图演示</h1>
 
         <div id="main1" style="width: 1000px;height:400px;"></div>
         <script type="text/javascript">
@@ -46,8 +46,8 @@
                     }
                     option1 = {
                         title: {
-                            text: 'canteen消费类型分析',//图片名称
-                            subtext: '210',
+                            text: '各个POS机收益分析',//图片名称
+                            subtext: 'POS机收益',
                             x: 'center'
                         },
                         legend: {
@@ -66,7 +66,7 @@
                         calculable : true,
                         tooltip: {},
                         xAxis: {
-                            name: 'opfare',
+                            name: '收益金额',
                             silent: false,
                             axisLine: {onZero: true},
                             splitLine: {show: false},
@@ -81,7 +81,7 @@
                             left: 100
                         },
                         series: [{
-                            name: 'canteen',
+                            name: '',
                             type: 'bar',
                             stack: 'one',
                             data: mapKeyValue1
@@ -92,7 +92,7 @@
                 }
             });
         </script>
-        <h1>canteen消费时间分析散点图演示</h1>
+        <h1>餐饮消费时间点频率分析散点图演示</h1>
         <div id="main2" style="width: 1000px;height:400px;"></div>
         <script type="text/javascript">
             var myChart2 = echarts.init(document.getElementById('main2'));
@@ -113,8 +113,8 @@
                     }
                     option2 = {
                         title: {
-                            text: 'canteen消费时间分析',//图片名称
-                            subtext: '210',
+                            text: '餐饮消费时间点频率分析',//图片名称
+                            subtext: '消费时间点',
                             x: 'center'
                         },
                         legend: {
@@ -152,11 +152,11 @@
                             }},
                         xAxis: {
                             data: mapOnlyKey2,
-                            name: 'point',
+                            name: '时间点',
                             scala:true
                         },
                         yAxis: {
-                            name: 'num',
+                            name: '频率',
                             scala:true
                         },
                         series: [{
@@ -165,13 +165,13 @@
                             data: mapKeyValue2,
                             markPoint : {
                                 data : [
-                                    {type : 'max', name: '最大值'},
-                                    {type : 'min', name: '最小值'}
+                                    {type : 'max', name: '频率最大值'},
+                                    {type : 'min', name: '频率最小值'}
                                 ]
                             },
                             markLine : {
                                 data : [
-                                    {type : 'average', name: '平均值'}
+                                    {type : 'average', name: '频率平均值'}
                                 ]
                             }
                         }]
@@ -181,7 +181,7 @@
             });
         </script>
 
-    <h1>用餐费用峰值分析折线图演示</h1>
+    <h1>每一套餐销售频率分析折线图演示</h1>
     <div id="main4" style="width: 1000px;height:400px;"></div>
     <script type="text/javascript">
         var myChart4= echarts.init(document.getElementById('main4'));
@@ -203,12 +203,12 @@
                 }
                 option4 = {
                     title: {
-                        text: '用餐费用峰值',//图片名称
-                        subtext: '210',
+                        text: '每一套餐销售频率分析',//图片名称
+                        subtext: '套餐销售频率',
                         x: 'center'
                     },
                     legend: {
-                        data: ['num'],
+                        data: ['频率'],
                         align: 'center',
                         left: 10
                     },
@@ -223,7 +223,7 @@
                     calculable : true,
                     tooltip: {},
                     xAxis: {
-                        name: 'opfare',
+                        name: '套餐金额',
                         silent: false,
                         axisLine: {onZero: true},
                         splitLine: {show: true},
@@ -233,23 +233,23 @@
                     },
                     yAxis: {
                         type:'value',
-                        name: 'num',
+                        name: '频率',
                         inverse: false,
                         splitArea: {show: true}
                     },
                     series: [{
-                        name: 'num',
+                        name: '频率',
                         type: 'line',
                         data: mapKeyValue4,
                         markPoint : {
                             data : [
-                                {type : 'max', name: '最大值'},
-                                {type : 'min', name: '最小值'}
+                                {type : 'max', name: '频率最大值'},
+                                {type : 'min', name: '频率最小值'}
                             ]
                         },
                         markLine : {
                             data : [
-                                {type : 'average', name: '平均值'}
+                                {type : 'average', name: '频率平均值'}
                             ]
                         }
                     }]

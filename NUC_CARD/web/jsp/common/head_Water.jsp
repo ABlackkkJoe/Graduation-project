@@ -36,7 +36,7 @@
             <ul class="list">
                 <li ><a href="#">用户角色：${userSession.userRole}</a></li>
                 <li ><a href="${pageContext.request.contextPath }/hmselect">收益明细</a></li>
-                <li ><a href="${pageContext.request.contextPath }/jsp/user_hm/hmShow_water.jsp">收益可视化_购热水</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user_hm/hmShow_water.jsp">收益可视化</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath }/logout">退出系统</a></li>
             </ul>

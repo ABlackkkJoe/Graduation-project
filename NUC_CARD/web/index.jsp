@@ -58,7 +58,7 @@
 						<li>
 							<ul class="address-text">
 								<li><b>SCHOOL </b></li>
-								<li>中北大学软件学院.</li>
+								<li>中北大学软件学院</li>
 							</ul>
 						</li>
 						<li>
@@ -70,7 +70,7 @@
 						<li>
 							<ul class="address-text">
 								<li><b>WEBSITE </b></li>
-								<li><a href="http://www.ocpro.cc/nuc_card/">http://www.ocpro.cc/nuc_card/</a></li>
+								<li><a href="http://www.ocpro.cc/nuc_card/login.jsp">http://www.ocpro.cc/nuc_card/login.jsp</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -95,7 +95,7 @@
 						<li><a href="#about" class="scroll">Home</a></li>
 						<li><a href="#work" class="scroll">Analyze</a></li>
 						<li><a href="#projects" class="scroll">Visualize</a></li>
-						<li><a href="http://www.ocpro.cc/nuc_card/">Login</a></li>
+						<li><a href="http://www.ocpro.cc/nuc_card/login.jsp">Login</a></li>
 						<li><a href="#contact" class="scroll">About</a></li>
 					</ul>
 					<div class="clearfix"> </div>
@@ -109,12 +109,12 @@
 		<div class="container">
 			<h3 class="title"> Home</h3>
 			<div class="col-md-8 about-left">
-				<p>用户能够查看系统界面，用户和管理员的登录界面，每个时间段消费情况的展示以及可视化；上传一卡通数据,能将一卡通数据提交给Hadoop集群进行处理,展示一卡通结果并进行一卡通预测；管理员能够使用增删改查用户信息；用户可以浏览一卡通信息、修改个人信息等功能。</p>
+				<p>用户能够通过WEB查看系统；各个角色的用户可以在登录界面进行登录、可以从时间维度、消费类型维度、POS机维度、年级专业班级维度等对数据可视化、修改个人信息；系统管理员可对用户做增删改查操作；该系统实现者对一卡通数据预处理,将一卡通数据提交给Hadoop集群实现存储和分析,并通过不同维度对数据可视化展示。运用大数据和可视化技术能够提高研究一卡通消费数据情况的能力和水平。</p>
 			</div>
 			<div class="col-md-4 about-right">
 				<ul>
-					<h5>Awards</h5>
-					<li><span class="glyphicon glyphicon-menu-right"></span> 普通学生</li>
+					<h5></h5>
+					<li><span class="glyphicon glyphicon-menu-right"></span> 在校学生</li>
 					<li><span class="glyphicon glyphicon-menu-right"></span> 学院管理员</li>
 					<li><span class="glyphicon glyphicon-menu-right"></span> 后勤管理员</li>
 					<li><span class="glyphicon glyphicon-menu-right"></span> 系统管理员</li>
@@ -134,13 +134,9 @@
 					<h4>Hadoop技术 </h4>
 				</div>
 				<div class="col-md-6 work-right"> 
-					<h5><span class="glyphicon glyphicon-briefcase"> </span> Hadoop架构</h5>
-					<p>HDFS（Hadoop分布式文件存储系统）:Hadoop生态体系中存储和管理数据的基础。Hadoop生态圈的文件存储系统是一个容错度很高的系统，能够检验和发现文件存储问题，可以在价格较低的普通硬件系统上运行。</p>
-<p>MapReduce（分布式离线计算框架）:MapReuce体现了分而治之的思想,可以进行PB级别海量数据的计算和处理,具有良好伸缩性和容错性。Map阶段对海量数据进行操作，生成键值对中间结果。Reduce阶段对Map阶段生成中间结果中相同“键”的所有“值”进行聚合处理，得到需要的数据。</p>
-<p>Hive（Hadoop数据仓库）:是大数据中的数据存储仓库，核心数据处理框架是MapReduce，Hive有内置数据库可以进行元数据管理,主要应用于数据的离线处理。Hive还提供了数据仓库功能:数据抽取转化加载,面向主题分析,海量数据的存储，数据查询。利用SQL查询语言，简单容易入手，一定程度上省去了书写代码的过程。</p>
-<p>HBase（NoSQL分布式列存数据库）:传统的数据库模型已不能满足一些特定场景的需要,NoSQL的出现很好的解决了传统数据库不能解决的一些问题。HBase可以在大量数据中实现并发读写操作,HBase使存储有了伸缩性，列可以动态的增加，自动切分数据，HBase中的数据使用MapReduce离线计算框架来处理。</p>
-<p>Sqoop（数据同步工具）:Sqoop是可以在关系型数据库和Hadoop之间传送数据的工具。例如:可以把MySQL中的数据传送到HDFS,也可以将HDFS上的数据传送到MySQL</p>
-				</div>
+					<h5><span class="glyphicon glyphicon-briefcase"> </span> Hadoop集群</h5>
+					<p>利用HDFS技术实现一卡通数据的存储、Hive和MySQL技术实现一卡通数据的统计和分析</p>
+</div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="work-info"> 
@@ -149,7 +145,7 @@
 				</div>
 				<div class="col-md-6 work-left work-left2"> 
 					<h5> Servlet <span class="glyphicon glyphicon-briefcase"> </span></h5>
-					<p>Servlet（Server Applet）是Java Servlet的简称，称为小服务程序或服务连接器，用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。</p>
+					<p>实现后台页面管理模块</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -159,7 +155,7 @@
 				</div>
 				<div class="col-md-6 work-right"> 
 					<h5><span class="glyphicon glyphicon-briefcase"> </span> K-MEANS算法</h5>
-					<p>K-MEANS算法是聚类分析算法中比较简单和容易使用的算法，主要用来解决数据的聚集问题，适用于处理大量的数据并且算法高效,主要思想是在划分多个中心点，不断取距离中心点最近值的算法。算法的核心在于计算中心点的公式，不同求中心点的算法会有差异,在本系统中可以将距离中心点近的多点归为一类，可以直观的看出一卡通数据的聚类效果。</p>
+					<p>K-MEANS聚类算法分析一卡通数据，得出3类消费水平群体。</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -169,17 +165,17 @@
 				</div>
 				<div class="col-md-6 work-left work-left2"> 
 					<h5> Echarts、Matplotlib <span class="glyphicon glyphicon-briefcase"></span> </h5>
-					<p>ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖轻量级的矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。 </p>
+					<p>Matplotlib和Echarts对分析结果进行可视化。 </p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="work-info"> 
 				<div class="col-md-6 work-left"> 
-					<h4>微信小程序开发 </h4>
+					<h4>微信一卡通小程序开发 </h4>
 				</div>
 				<div class="col-md-6 work-right"> 
 					<h5><span class="glyphicon glyphicon-briefcase"> </span> 前后台交互</h5>
-					<p>微信用户群体的大量增加，需要微信开发来支持大量的APP应用。小程序是近些年人们热烈谈论的技术，小程序的面世解决传统APP需要下载并且占用手机内存的情况，用户可以通过扫描二维码直接进入APP应用。相比于服务号，小程序开发成本低，易于传播和简单易用。小程序可以个性化自己的服务，简洁的交互页面，提高了用户体验。</p>
+					<p>移动端微信一卡通小程序模拟用户行为并与WEB端相结合。</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -194,7 +190,7 @@
 			<div class="sap_tabs">			
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-						<li class="resp-tab-item"><span>All</span></li>
+						<li class="resp-tab-item"><span>SHOW</span></li>
 						<li class="resp-tab-item"><span>学院管理员</span></li>
 						<li class="resp-tab-item"><span> 系统管理员</span></li>
 						<li class="resp-tab-item"><span>普通学生</span></li>					
@@ -452,10 +448,10 @@
 			<div class="contact-row">
 				<div class="col-md-6 contact-right">
 					<div class="address-left">
-						<p>网址输入：<br> www.ocpro.cc/nuc_card </p>
+						<p>快速链接：<br> <a href="http://www.ocpro.cc/nuc_card/login.jsp">http://www.ocpro.cc/nuc_card/login.jsp</a> </p>
 					</div>
 					<div class="address-right">
-						<p>username :  学号</p>
+						<p>username : 学号</p>
 						<p>password : <a href="mailto:info@example.com">7个0</a></p>
 					</div>
 					<div class="clearfix"></div>

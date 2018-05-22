@@ -11,7 +11,7 @@
 <div class="right">
        <div class="location">
            <strong>你现在所在的位置是:</strong>
-           <span>消费管理页面</span>
+           <span>学院消费详情页面</span>
        </div>
        <!--账单表格 样式和供应商公用-->
       <table class="providerTable" cellpadding="0" cellspacing="0">

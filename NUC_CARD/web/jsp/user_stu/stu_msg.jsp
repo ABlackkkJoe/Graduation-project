@@ -16,13 +16,14 @@
 <div class="right">
        <div class="location">
            <strong>你现在所在的位置是:</strong>
-           <span>个人管理页面</span>
+           <span>个人消费详情页面</span>
        </div>
        <!--账单表格 样式和供应商公用-->
       <table class="providerTable" cellpadding="0" cellspacing="0">
           <tr class="firstTr">
               <th width="20%">消费类型</th>
-              <th width="20%">opfare</th>
+              <th width="20%">消费时间</th>
+			  <th width="10%">消费金额</th>
               <th width="10%">学院</th>
               <th width="10%">系别</th>
               <th width="10%">年级</th>
@@ -31,9 +32,9 @@
           <c:forEach var="consume" items="${consumes}" varStatus="status">
 				<tr>
 					<td>
-						<c:if test="${consume.acccode = 210}">餐厅</c:if>
-						<c:if test="${consume.acccode = 211}">淋浴</c:if>
-						<c:if test="${consume.acccode = 222}">饮水</c:if>
+						<c:if test="${consume.acccode ==210}"><span>餐饮支出</span></c:if>
+						<c:if test="${consume.acccode == 211}"><span>淋浴支出</span></c:if>
+						<c:if test="${consume.acccode == 222}"><span>够热水支出</span></c:if>
 					</td>
 					<td>
 						<span>${consume.opfare_sum}</span>
