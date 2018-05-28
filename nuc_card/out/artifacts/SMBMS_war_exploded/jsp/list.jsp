@@ -35,7 +35,7 @@
         <span>学院管理员页面</span>
     </div>
     <div class="search">
-        <form method="get" action="/jsp/user.do">
+        <form method="get" action="${pageContext.request.contextPath }/jsp/user.do">
             <input name="method" value="dp" class="input-text" type="hidden">
             <span>选择：</span>
 
@@ -46,7 +46,7 @@
             <select id="s_county" name="num"></select>
 
 
-            <script class="resources library" src="/js/school.js" type="text/javascript"></script>
+            <script class="resources library" src="${pageContext.request.contextPath }/js/school.js" type="text/javascript"></script>
 
             <script type="text/javascript">_init_area();</script>
 

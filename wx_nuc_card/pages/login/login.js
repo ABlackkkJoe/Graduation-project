@@ -42,7 +42,7 @@ Page({
       //url: "http://www.ocpro.cc/nuc_card" + '/wx_login?userCode=' + _this.data.userCode + '&userPassword=' + _this.data.passwd,
       //url: "http://localhost:8080" + '/wx_login?userCode=' + _this.data.userCode + '&userPassword=' + _this.data.passwd,
       //url: "http://localhost:8080" + '/wx_login', 
-      url: "http://www.ocpro.cc/NUC-CARD" + '/wx_login',  
+      url: "http://www.ocpro.cc/nuc_card" + '/wx_login',  
       data:{
         userCode: _this.data.userCode,
         userPassword:  _this.data.passwd,

@@ -34,9 +34,9 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-                <li ><a href="${pageContext.request.contextPath }/jsp/user.do?method=queryStu">查询学生</a></li>
-                <li ><a href="${pageContext.request.contextPath }/jsp/list.jsp">可视化</a></li>
-                <li ><a href="${pageContext.request.contextPath }/jsp/user_dp/dp_kmeans.jsp">消费水平</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user.do?method=queryStu">学生与类型查询</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/list.jsp">院专业班可视化</a></li>
+                <li ><a href="${pageContext.request.contextPath }/kmeans">Kmeans求消费水平</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath }/logout">退出系统</a></li>
             </ul>

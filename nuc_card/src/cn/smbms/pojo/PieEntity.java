@@ -1,6 +1,10 @@
 package cn.smbms.pojo;
 
 public class PieEntity {
+    private  String f;
+    private  String m;
+    private  String classify;
+    private String gender;
     private String opedt;
     private String opdt;
     private String dscrp;
@@ -23,7 +27,40 @@ public class PieEntity {
     private String classname;
     private String updatetime;
     private float ave;
+
 private int count;
+
+    public void setF(String f) {
+        this.f = f;
+    }
+
+    public String getF() {
+        return f;
+    }
+
+    public void setM(String m) {
+        this.m = m;
+    }
+
+    public String getM() {
+        return m;
+    }
+
+    public void setClassify(String classify) {
+        this.classify = classify;
+    }
+
+    public String getClassify() {
+        return classify;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGender() {
+        return gender;
+    }
 
     public void setOpedt(String opedt) {
         this.opedt = opedt;
@@ -206,11 +243,15 @@ private int count;
     }
     @Override
     public String toString() {
-        return "PieEntity [acccode=" + acccode+ ", outid=" + outid + ", opfare=" + opfare+ ", termname=" + termname + ", dpname2=" + dpname2+ ", dpname3=" + dpname3+ ", dpname1=" + dpname1+ ", dpname4=" + dpname4+ ", classname="
+        return "PieEntity [acccode=" + acccode+ ", f=" + f+ ", m=" + m+ ", outid=" + outid+ ", classify=" + classify+ ", gender=" + gender + ", opfare=" + opfare+ ", termname=" + termname + ", dpname2=" + dpname2+ ", dpname3=" + dpname3+ ", dpname1=" + dpname1+ ", dpname4=" + dpname4+ ", classname="
                 + classname+ ", opedt=" + opedt+ ", income=" + income+ ", opdt=" + opdt+ ", dscrp=" + dscrp+ ", cost=" + cost+ ", passwd=" + passwd+ ", status=" + status+ ", dt=" + dt + ", max=" + max + ", min=" + min + ", count=" + count+ ", ave=" + ave+ ", updatetime=" + updatetime + "]";
     }
-    public PieEntity(int count,String opedt,int status,float income,String dscrp,String opdt,float cost,float balance,String passwd,int acccode,String outid,float max,float min,String dt, float ave,float opfare,String termname,String dpname1,String dpname2,String dpname3,String dpname4, String classname, String updatetime) {
+    public PieEntity(int count,String f,String m,String classify,String gender,String opedt,int status,float income,String dscrp,String opdt,float cost,float balance,String passwd,int acccode,String outid,float max,float min,String dt, float ave,float opfare,String termname,String dpname1,String dpname2,String dpname3,String dpname4, String classname, String updatetime) {
         super();
+        this.f=f;
+        this.m=m;
+        this.classify=classify;
+        this.gender=gender;
         this.opedt=opedt;
         this.income=income;
         this.opdt=opdt;

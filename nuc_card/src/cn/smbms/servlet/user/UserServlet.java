@@ -14,8 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -44,6 +43,8 @@ public class UserServlet extends HttpServlet {
             this.add(request, response);
         } else if (null != method && method.equals("query")) {          // 查询用户操作
             this.query(request, response);
+        }else if (null != method && method.equals("level")) {          // 查询用户操作
+            this.level(request, response);
         } else if (null != method && method.equals("queryStu")) {          // 查询学生操作
             this.queryStu(request, response);
         } else if (null != method && method.equals("queryStuName")) {          // 查询学生操作
@@ -181,6 +182,39 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("totalCount", totalCount);
         request.setAttribute("currentPageNo", currentPageNo);
         request.getRequestDispatcher("/jsp/userlist.jsp").forward(request, response);
+
+    }
+    private void level(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 查询用户列表
+
+        String num = request.getParameter("num");
+        System.out.println(num);
+        String in="/Users/Zd/Desktop/nuc_card/src/cn/smbms/kmeans/clusterResult.txt";
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        try{
+            FileReader fr = new FileReader(in);
+            BufferedReader br = new BufferedReader(fr);
+            //存放数据的临时变量
+            String lineData = null;
+            String[] splitData = null;
+            int line = 0;
+            while( br.ready()){
+                lineData = br.readLine();
+                //System.out.println(lineData);
+                splitData = lineData.split(" ");
+                System.out.println(splitData[0]);
+                if(num.equals(splitData[0])){
+                    request.setAttribute("number",splitData[0]);
+                    request.setAttribute("cla",splitData[2]);
+                    break;
+                }
+                line++;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        request.getRequestDispatcher("/jsp/user_dp/dp_kmeans.jsp").forward(request, response);
 
     }
     private void queryStudent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

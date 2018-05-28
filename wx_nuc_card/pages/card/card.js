@@ -47,7 +47,7 @@ Page({
     wx.request({
       //url: "http://localhost:8080" + "/card_show?userCode=" + _this.data.userCode,
       //url: "http://localhost:8080" + "/card_show",
-      url: "http://www.ocpro.cc/NUC-CARD" + "/card_show",
+      url: "http://www.ocpro.cc/nuc_card" + "/card_show",
       data: {
         userCode: _this.data.userCode
       },
@@ -160,7 +160,7 @@ Page({
         var opfare = res.result;
         console.log(opfare);
         wx.request({
-          url: "http://www.ocpro.cc/NUC-CARD/add_opfare?opfare=" + opfare,
+          url: "http://www.ocpro.cc/nuc_card/add_opfare?opfare=" + opfare,
           //url: "http://localhost:8080/add_opfare?opfare=" + opfare,
           header: { 'Content-Type': 'application/x-www-form-urlencoded' },
           data: {

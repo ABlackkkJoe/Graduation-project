@@ -35,7 +35,7 @@
         <span>学院管理员页面</span>
     </div>
     <div class="search">
-        <form method="get" action="/jsp/user.do">
+        <form method="get" action="${pageContext.request.contextPath }/jsp/user.do">
             <input name="method" value="queryStuName" class="input-text" type="hidden">
             <span>用户名：</span>
             <input name="queryname" class="input-text"	type="text" value="${queryUserName}">

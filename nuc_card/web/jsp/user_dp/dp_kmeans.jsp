@@ -11,12 +11,32 @@
 <div class="right">
        <div class="location">
            <strong>你现在所在的位置是:</strong>
-           <span>学院消费详情页面</span>
+           <span>学院管理页面</span>
        </div>
+    <div class="search">
+        <form method="get" action="${pageContext.request.contextPath }/jsp/user.do">
+            <input name="method" value="level" class="input-text" type="hidden">
+            <span>评选贫困生做依据</span>
+            <span>输入学号：</span>
+            <input name="num" class="input-text"	type="text" value="${number}">
+            <input	value="查 询" type="submit" id="searchbutton">
+            <span>${number}</span>
+            <span>:</span>
+            <span>${cla}</span>
+        </form>
+    </div>
        <!--账单表格 样式和供应商公用-->
-      <table class="providerTable" cellpadding="0" cellspacing="0">
-          <<img src="/images/g6.jpg" >
+      <table>
+          <tr>
+              <td><img src="${pageContext.request.contextPath }/images/g6.jpg" ></td>
+              <td>
+                  <span style="font-size: larger">第1类[消费水平：低]数目: 1875</span><br>
+                  <span style="font-size: larger">第2类[消费水平：中]数目: 1955</span><br>
+                  <span style="font-size: larger">第3类[消费水平：高]数目: 3093</span>
+              </td>
+          </tr>
       </table>
+
   </div>
 </section>
 <%@include file="/jsp/common/foot.jsp" %>

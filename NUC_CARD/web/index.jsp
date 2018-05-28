@@ -92,11 +92,11 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<div class="menu">
 					<ul class="nav navbar">
-						<li><a href="#about" class="scroll">Home</a></li>
-						<li><a href="#work" class="scroll">Analyze</a></li>
-						<li><a href="#projects" class="scroll">Visualize</a></li>
-						<li><a href="http://www.ocpro.cc/nuc_card/login.jsp">Login</a></li>
-						<li><a href="#contact" class="scroll">About</a></li>
+						<li><a href="#about" class="scroll">系统介绍</a></li>
+						<li><a href="#work" class="scroll">开发技术</a></li>
+						<li><a href="#projects" class="scroll">系统预览</a></li>
+						<li><a href="http://www.ocpro.cc/nuc_card/login.jsp">系统登录</a></li>
+						<li><a href="#contact" class="scroll">系统关于</a></li>
 					</ul>
 					<div class="clearfix"> </div>
 				</div>
@@ -107,17 +107,17 @@
 	<!--about-->
 	<div id="about" class="about">
 		<div class="container">
-			<h3 class="title"> Home</h3>
+			<h3 class="title"> 系统介绍</h3>
 			<div class="col-md-8 about-left">
-				<p>用户能够通过WEB查看系统；各个角色的用户可以在登录界面进行登录、可以从时间维度、消费类型维度、POS机维度、年级专业班级维度等对数据可视化、修改个人信息；系统管理员可对用户做增删改查操作；该系统实现者对一卡通数据预处理,将一卡通数据提交给Hadoop集群实现存储和分析,并通过不同维度对数据可视化展示。运用大数据和可视化技术能够提高研究一卡通消费数据情况的能力和水平。</p>
+				<p>用户能够通过WEB查看系统；各个角色的用户可以在登录界面进行登录、可以从时间维度、消费类型维度、POS机维度、性别维度、消费水平维度、年级专业班级维度等对数据可视化、修改个人信息；系统管理员可对用户做增删改查操作；该系统实现者对一卡通数据预处理,将一卡通数据提交给Hadoop集群实现存储和分析,并通过不同维度对数据可视化展示。运用大数据和可视化技术能够提高研究一卡通消费数据情况的能力和水平。</p>
 			</div>
 			<div class="col-md-4 about-right">
 				<ul>
 					<h5></h5>
-					<li><span class="glyphicon glyphicon-menu-right"></span> 在校学生</li>
+					<li><span class="glyphicon glyphicon-menu-right"></span> 系统管理员</li>
 					<li><span class="glyphicon glyphicon-menu-right"></span> 学院管理员</li>
 					<li><span class="glyphicon glyphicon-menu-right"></span> 后勤管理员</li>
-					<li><span class="glyphicon glyphicon-menu-right"></span> 系统管理员</li>
+					<li><span class="glyphicon glyphicon-menu-right"></span> 在校学生</li>
 				</ul>
 				<div class="clearfix"> </div>
 			</div>
@@ -128,10 +128,10 @@
 	<!--work-experience-->
 	<div id="work" class="work">
 		<div class="container">
-			<h3 class="title">Aanlyze</h3>
+			<h3 class="title">开发技术</h3>
 			<div class="work-info"> 
 				<div class="col-md-6 work-left"> 
-					<h4>Hadoop技术 </h4>
+					<h4>Hadoop技术</h4>
 				</div>
 				<div class="col-md-6 work-right"> 
 					<h5><span class="glyphicon glyphicon-briefcase"> </span> Hadoop集群</h5>
@@ -144,18 +144,28 @@
 					<h4>JAVA WEB </h4>
 				</div>
 				<div class="col-md-6 work-left work-left2"> 
-					<h5> Servlet <span class="glyphicon glyphicon-briefcase"> </span></h5>
+					<h5>WEB框架选择MVC设计模式<span class="glyphicon glyphicon-briefcase"> </span></h5>
 					<p>实现后台页面管理模块</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="work-info"> 
 				<div class="col-md-6 work-left"> 
-					<h4>聚类算法 </h4>
+					<h4>聚类算法</h4>
 				</div>
 				<div class="col-md-6 work-right"> 
 					<h5><span class="glyphicon glyphicon-briefcase"> </span> K-MEANS算法</h5>
 					<p>K-MEANS聚类算法分析一卡通数据，得出3类消费水平群体。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="work-info">
+				<div class="col-md-6 work-left">
+					<h4>离散化</h4>
+				</div>
+				<div class="col-md-6 work-right">
+					<h5><span class="glyphicon glyphicon-briefcase"> </span> 等距离离散化</h5>
+					<p>等距离离散化分析一卡通数据，得出消费数量与消费性别关系。</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -186,13 +196,13 @@
 	<!--portfolio-->
 	<div id="projects" class="portfolio">
 		<div class="container">
-			<h3 class="title wow zoomInLeft animated" data-wow-delay=".5s">Visualize</h3>
+			<h3 class="title wow zoomInLeft animated" data-wow-delay=".5s">系统预览</h3>
 			<div class="sap_tabs">			
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-						<li class="resp-tab-item"><span>SHOW</span></li>
+						<li class="resp-tab-item"><span>整体预览</span></li>
 						<li class="resp-tab-item"><span>学院管理员</span></li>
-						<li class="resp-tab-item"><span> 系统管理员</span></li>
+						<li class="resp-tab-item"><span>后勤管理员</span></li>
 						<li class="resp-tab-item"><span>普通学生</span></li>					
 					</ul>	
 					<div class="clearfix"> </div>	
@@ -205,7 +215,7 @@
 											<img src="images/g1.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>登录页面.</p>
+												<p>等距离离散化一卡通数据，分析消费数量与消费性别的关系.</p>
 											</div>
 										</a>	
 									</div>
@@ -227,7 +237,7 @@
 											<img src="images/g3.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>all用户信息.</p>
+												<p>后勤管理员可查看并下载可视化分析报告.</p>
 											</div>
 										</a>	
 									</div>
@@ -249,7 +259,7 @@
 											<img src="images/g5.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>学院餐厅、淋浴、热水三大消费柱状图展示.</p>
+												<p>学院、专业、班级、个人依次查看餐饮、淋浴、购热水消费情况分析.</p>
 											</div>
 										</a>	
 									</div>
@@ -260,7 +270,7 @@
 											<img src="images/g6.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>K-Means聚类算法对个人进行分类.</p>
+												<p>K-Means聚类算法对个人消费水平进行分类.</p>
 											</div>
 										</a>	
 									</div>
@@ -271,7 +281,7 @@
 											<img src="images/g7.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>淋浴12月每人总消费散点图展示.</p>
+												<p>学院管理员查看预警学生信息.</p>
 											</div>
 										</a>	
 									</div>
@@ -282,7 +292,7 @@
 											<img src="images/g8.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>个人每人消费K图展示.</p>
+												<p>后勤管理员整体查看每个月个人消费情况.</p>
 											</div>
 										</a>	
 									</div>
@@ -320,7 +330,7 @@
 											<img src="images/g6.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>学院餐饮、淋浴、热水支出柱状图展示.</p>
+												<p>K-Means聚类算法对个人消费水平进行分类.</p>
 											</div>
 										</a>	
 									</div>
@@ -331,7 +341,7 @@
 											<img src="images/g7.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>放大<span> 查看</span></h3>
-												<p>K-Means聚类算法对用户分类.</p>
+												<p>学院管理员查看预警学生信息.</p>
 											</div>
 										</a>	
 									</div>
@@ -444,7 +454,7 @@
 	<!--contact -->
 	<div class="welcome contact" id="contact">
 		<div class="container">
-			<h3 class="title">About</h3>
+			<h3 class="title">系统关于</h3>
 			<div class="contact-row">
 				<div class="col-md-6 contact-right">
 					<div class="address-left">

@@ -35,7 +35,8 @@
         <nav>
             <ul class="list">
                 <li ><a href="${pageContext.request.contextPath }/jsp/user_hm/hmShow_shower.jsp">收益可视化</a></li>
-                <li ><a href="${pageContext.request.contextPath }/hmselect">收益明细</a></li>
+                <li ><a href="${pageContext.request.contextPath }/jsp/user_dp/dp_disperse.jsp">离散化比较男女消费</a></li>
+                <!--<li ><a href="${pageContext.request.contextPath }/hmselect">收益明细</a></li>-->
                 <li ><a href="${pageContext.request.contextPath }/jsp/shReport.jsp">分析报告</a></li>
                 <li><a href="${pageContext.request.contextPath }/jsp/pwdmodify.jsp">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath }/logout">退出系统</a></li>
