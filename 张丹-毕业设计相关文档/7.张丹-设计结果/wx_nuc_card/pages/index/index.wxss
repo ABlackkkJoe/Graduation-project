@@ -1,0 +1,29 @@
+/**index.wxss**/
+.container {
+  height: 560px;
+  background-color: #bbb;
+      /*微信暂不支持静态bgimg文件，改用服务器url*/
+  background-image: url('http://www.nuc.edu.cn/_mediafile/nuc/2015/05/23/11ut8jwb00.jpg');
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+}
+
+.usermotto {
+  color: #fff;
+  margin-top: 50px;
+}
