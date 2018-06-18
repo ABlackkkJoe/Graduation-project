@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="fix_tip {{offline?'active':''}}">
+        <text>离线缓存模式</text>
+    </view>
+
+  <!--功能导航-->
+  <swiper class="main-swpier" indicator-dots="true" indicator-active-color="#73b4ef">
+  <swiper-item class="main-core" wx:for="{{cores}}"  wx:for-item="core" wx:key="id" >
+    <block wx:for="{{core}}" wx:key="id">
+      <navigator wx:if="{{user.is_bind && !item.disabled && (!user.teacher || !item.teacher_disabled) && (!offline || !item.offline_disabled) }}" class="main-core-item" url="{{'/pages/core/'+item.id+'/'+item.id}}">
+        <image class="core-item-icon" src="/image/{{item.id}}.png"></image>
+        <text class="core-item-name">{{item.name}}</text>
+      </navigator>
+      <view wx:else class="main-core-item disabled" bindtap="disabled_item">
+        <image class="core-item-icon" src="/image/{{item.id}}@disabled.png"></image>
+        <text class="core-item-name">{{item.name}}</text>
+      </view>
+    </block>
+  </swiper-item >
+  </swiper>
+    <view class="fix_tip {{disabledItemTap?'active':''}}">
+        <text wx:if="{{remind == '未绑定'}}">请先绑定帐号</text>
+        <text wx:else>{{(user.teacher && !offline) ? '无权限' : '该服务不可用'}}</text>
+    </view>
+  <view wx:if="{{remind}}" class="remind-box">
+    <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/image/loading.gif"></image>
+    <block wx:else>
+      <image class="remind-img" src="/image/nothing.png"></image>
+      <text class="remind-text">{{remind}}</text>
+      <navigator wx:if="{{remind == '未绑定'}}" url="/pages/login/login" class="remind-btn">前往绑定</navigator>
+    </block>
+  </view>
+  <!--卡片列表-->
+  <view wx:else class="main-card">
+  
+    <!--一卡通-->
+    <view class="main-card-item" id="ykt" wx-if="{{card.ykt.show}}">
+      <navigator url="/pages/card">
+        <view class="card-item-hd">
+          <image class="card-item-icon" src="/images/core/ykt.png"></image>
+          <text class="card-item-name">一卡通</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="card-info-hd">
+            <view class="card-info-left">
+              <text class="ykt-title">余额：</text>
+            </view>
+            <view class="card-info-right">
+              <view>截至时间：{{card.ykt.data.last_time}}</view>
+            </view>
+          </view>
+          <view class="ykt-balance">
+            <text class="ykt-balance-value">{{card.ykt.data.balance}}</text>
+            <text class="ykt-balance-text">元</text>
+          </view>
+          <block wx:if="{{card.ykt.data.cost_status}}">
+            <text class="ykt-title">今日消费：</text>
+            <view class="ykt-cost">
+              <block wx:for="{{card.ykt.data.today_cost.value}}" wx:key="*this">
+                <text class="ykt-cost-value">{{item}}</text>
+                <text class="ykt-cost-text" wx:if="{{ index != card.ykt.data.today_cost.value.length - 1}}">+</text>
+              </block>
+              <text class="ykt-cost-text">=</text>
+              <text class="ykt-cost-total">{{card.ykt.data.today_cost.total}}</text>
+              <text class="ykt-cost-text">元</text>
+            </view>
+          </block>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="main-ending">
+    <view class="main-ending-line"></view>
+    <view class="main-ending-text">我是一个乖巧的结尾</view>
+    <view class="main-ending-line"></view>
+  </view>
+
+</view>
